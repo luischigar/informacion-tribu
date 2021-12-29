@@ -1,0 +1,4 @@
+FROM openjdk:11
+COPY "./target/Informacion_Tribus-1.jar" "Informacion_Tribus-1.jar"
+EXPOSE 9991
+ENTRYPOINT [ "java", "-jar", "Informacion_Tribus-1.jar" ]
