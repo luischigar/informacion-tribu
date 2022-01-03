@@ -14,6 +14,7 @@ import com.example.demo.entity.Persona;
 import com.example.demo.entity.Proveedor;
 import com.example.demo.entity.Tecnologia;
 import com.example.demo.entityDto.PersonaDto;
+import com.example.demo.entityDto.PersonaIngresoDto;
 import com.example.demo.entityDto.PersonaMostrarDto;
 import com.example.demo.service.IngresoService;
 import com.example.demo.service.ManejoTecnologiaService;
@@ -48,6 +49,9 @@ public class PersonaLogic {
 			Iterable<Persona> lPersona = personaService.findAll();
 			Iterable<ManejoTecnologia> lManejoTecnologia = manejoTecnologiaService.findAll();
 			Iterable<Ingreso> lIngreso = ingresoService.findAll();
+			
+			List<PersonaIngresoDto> l = personaService.personaObtenerAsignacion();
+			System.out.println(l);
 			List<PersonaMostrarDto> lPersonaMostrarDto = new LinkedList<PersonaMostrarDto>();
 			
 			for(Persona item: lPersona) {
