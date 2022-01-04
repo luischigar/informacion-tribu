@@ -1,4 +1,4 @@
-FROM openjdk:8
+FROM openjdk:11
 ADD target/Informacion_Tribus-1.jar Informacion_Tribus-1.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-jar" , "Informacion_Tribus-1.jar"]
