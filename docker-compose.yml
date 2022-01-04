@@ -8,14 +8,10 @@ services:
       - MYSQL_DATABASE=informacion_tribus
     ports:
       - "3307:3306"
-  springboot-app:
-    image: springboot-app
+  springboot-docker-container:
+    image: springboot-docker-container
     ports:
-      - "9991:9991"
-    environment:
-      SPRING_DATASOURCE_URL: jdbc:mysql://mysql-standalone:3306/informacion_tribus?autoReconnect=true&useSSL=false
-      SPRING_DATASOURCE_USERNAME: "root"
-      SPRING_DATASOURCE_PASSWORD: "root"
+      - "8082:8082"
     build:
       context: "./"
       dockerfile: "DockerFile"
